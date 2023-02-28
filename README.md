@@ -249,3 +249,8 @@ $ sudo apt install clang-format
 - https://habr.com/ru/post/541258/
 - https://losst.pro/komandy-linux-dlya-raboty-s-fajlami
 - https://ru.stackoverflow.com/questions/134183/Что-такое-pull-request
+- https://hub.github.com/
+- https://github.com/
+- https://bitbucket.org/
+- https://about.gitlab.com/
+- http://learngitbranching.js.org/
