@@ -7,6 +7,8 @@
 ```
 https://github.com/ledibonibell/lab-02.git
 ```
+![Снимок экрана от 2023-02-28 21-43-26](https://user-images.githubusercontent.com/125737299/221953387-dca12309-fdea-4c3a-a4ed-d04f5f39d981.png)
+
 
 ## 2. Выполните инструкцию по созданию первого коммита на странице репозитория, созданного на предыдещем шаге
  
@@ -236,6 +238,8 @@ $ git rebase --continue
 Conflicts have disappeared
 
 ## 9. Вмержите `pull-request` `patch2 -> master`
+
+![Снимок экрана от 2023-02-28 22-00-10](https://user-images.githubusercontent.com/125737299/221953495-d5b3ee13-e6d2-474b-b8d8-abbcfe731b00.png)
 
 ## Required libraries
 
