@@ -163,75 +163,89 @@ $ git log master
 ## 12. Удалите локальную ветку `patch1`
 
 ```
-$ git checkout -b origin
 $ git branch -d patch1
 ```
 
 # Task 3
 
-## 1.
+## 1. Создайте новую локальную ветку `patch2`
  
 ```
-
+$ git checkout -b patch2
 ```
 
-## 2.
+## 2. Измените `code style` с помощью утилиты `clang-format`. Например, используя опцию `-style=Mozilla`
  
 ```
-
+$ clang-format -i -style=Mozilla "hello world.cpp"
 ```
 
-## 3.
+## 3. `commit`, `push`, создайте `pull-request `patch2 -> master`
  
 ```
-
+$ git commit -a -m "Changed code style in cpp file"
+$ git push -u origin patch2
 ```
 
-## 4.
+## 4. В ветке master в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык
  
 ```
-
+$ git checkout master
+$ edit "Hello world.cpp"
+```
+```
+#include <iostream>
+#include <string>
+ 
+int main(int argc, char** argv){
+  string name;                                           // Имя пользователя
+  std::cin >> name;                                      // Ввод имени пользователя
+  std::cout << "Hello world from " << name << std::endl; // Вывод данных
+} 
+```
+```
+$ git commit -a -m "Fixed cpp file"
+$ git push -u origin patch1
 ```
 
-## 5.
+## 5. Убедитесь, что в `pull-request` появились конфликтны
+ 
+Yes, there were conflicts
+
+## 6. Для этого локально выполните `pull + rebase` (точную последовательность команд, следует узнать самостоятельно). Исправьте конфликты
  
 ```
-
+$ git pull origin master
+$ git rebase master
+$ edit "Hello world.cpp"
+$ git commit -a -m "Update code"
 ```
 
-## 6.
+## 7. Сделайте `force push` в ветку `patch2`
  
 ```
-
+$ git pull origin master
+$ git rebase master
+$ edit "Hello world.cpp"
+$ git commit -a -m "Update Hello world.cpp"
+$ git rebase --continue
 ```
 
-## 7.
+## 8. Убедитель, что в `pull-request` пропали конфликтны
  
-```
+Conflicts have disappeared
 
-```
-
-## 8.
- 
-```
-
-```
-
-## 9.
- 
-```
-
-```
+## 9. Вмержите `pull-request` `patch2 -> master`
 
 ## Required libraries
 
 ```
 $ sudo apt install git
 $ sudo snap install sublim-text
+$ sudo apt install clang-format
 ```
 
 ## References used
 - https://habr.com/ru/post/541258/
 - https://losst.pro/komandy-linux-dlya-raboty-s-fajlami
 - https://ru.stackoverflow.com/questions/134183/Что-такое-pull-request
-- 
