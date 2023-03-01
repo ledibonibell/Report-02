@@ -207,7 +207,7 @@ int main(int argc, char** argv){
 ```
 ```
 $ git commit -a -m "Fixed cpp file"
-$ git push -u origin patch1
+$ git push -u origin patch2
 ```
 
 ## 5. Убедитесь, что в `pull-request` появились конфликтны
